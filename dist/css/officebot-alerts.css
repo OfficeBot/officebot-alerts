@@ -1,0 +1,56 @@
+/**
+  * These shadows are designed to mimic the material design elevation
+  * source: http://codepen.io/sdthornton/pen/wBZdXq
+  */
+.height-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.2s ease-in-out;
+}
+.height-2 {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.height-3 {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.height-4 {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.height-5 {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.officebot-alerts-container {
+  position: fixed;
+  overflow-y: hidden;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  pointer-events: none;
+  padding: 10px;
+  z-index: 1001;
+}
+.officebot-alerts-container.bottom {
+  max-height: 100%;
+}
+.officebot-alerts-container.top {
+  top: 0;
+}
+.officebot-alerts-container div {
+  pointer-events: all;
+}
+.officebot-alerts-container .alert {
+  margin-bottom: 7px;
+  margin-top: 7px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.officebot-alerts-container .single-alert {
+  margin-top: 0px;
+  transition: 1s opacity, 0.5s max-height, 0.5s margin-top;
+  max-height: 500px;
+  transition-delay: 0s, 2s;
+  -webkit-transition-delay: 0s, 0.2s, 0.5s;
+}
+.officebot-alerts-container .single-alert.done {
+  opacity: 0;
+  max-height: 0;
+  margin-top: -14px;
+}

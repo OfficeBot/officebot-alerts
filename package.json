@@ -1,0 +1,39 @@
+{
+  "name": "officebot-alerts",
+  "version": "1.0.0",
+  "description": "A simple Growl-like alert service for Angular.js apps",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OfficeBot/officebot-alerts.git"
+  },
+  "keywords": [
+    "Growl",
+    "Angular.js",
+    "OfficeBot"
+  ],
+  "author": "Scott Peterson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OfficeBot/officebot-alerts/issues"
+  },
+  "homepage": "https://github.com/OfficeBot/officebot-alerts#readme",
+  "dependencies": {
+    "angular": "^1.5.2"
+  },
+  "devDependencies": {
+    "brfs": "^1.4.3",
+    "browserify": "^13.0.0",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.0.5",
+    "gulp-minify": "0.0.7",
+    "gulp-streamify": "^1.0.2",
+    "gulp-util": "^3.0.7",
+    "streamify": "^0.2.5",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
+  }
+}

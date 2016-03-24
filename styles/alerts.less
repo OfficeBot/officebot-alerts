@@ -1,0 +1,43 @@
+.officebot-alerts-container {
+	position: fixed;
+	overflow-y: hidden;
+	right : 0;
+	left :0;
+	bottom: 0;
+	pointer-events: none;
+	padding: 10px;
+	z-index: 1001; //The bootstrap navbar is 1000 by default
+
+	&.bottom {
+		max-height: 100%;
+	}
+
+	&.top {
+		top: 0;
+	}
+
+	div {
+		pointer-events: all;
+	}
+
+	.alert {
+		margin-bottom: 7px;
+		margin-top: 7px;
+		.height-4();
+	}
+
+	.single-alert {
+		margin-top: 0px;
+		transition: 1s opacity, 0.5s max-height, 0.5s margin-top;
+		max-height: 500px;
+		transition-delay: 0s, 2s;
+		-webkit-transition-delay: 0s, 0.2s, 0.5s;
+
+		&.done {
+			opacity : 0;
+			max-height: 0;
+			margin-top: -14px;
+		}
+	}
+	
+}

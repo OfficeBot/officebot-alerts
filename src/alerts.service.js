@@ -13,9 +13,13 @@ module.exports = function alertsService($timeout, $rootScope, $window) {
 	var defaultTimeout = 3000; //in milliseconds
 
 	this.info = info;
+	this.success = success;
 	this.warning = warning;
 	this.danger = danger;
 	this.alert = alert;
+
+	this.get = get;
+	this.clear = clear;
 
 	/**
 		* @desc Displays an info message

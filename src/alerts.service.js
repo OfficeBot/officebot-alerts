@@ -15,7 +15,7 @@ module.exports = function alertsService($timeout, $rootScope, $window) {
 	this.info = info;
 	this.success = success;
 	this.warning = warning;
-	this.error = error;
+	this.error = danger;
 	this.danger = danger;
 	this.alert = alert;
 
@@ -44,18 +44,6 @@ module.exports = function alertsService($timeout, $rootScope, $window) {
 		*/
 	function warning(title, message, timeout) {
 		return alert(title, message, 'alert-warning', timeout);
-	}
-
-	/**
-		* @desc Displays a error message
-		* @memberof Alerts.Service
-		* @param {string} title
-		* @param {string=} message
-		* @param {number=} timeout
-		* @returns {number} Alerts array length
-		*/
-	function error(title, message, timeout) {
-		return alert(title, message, 'alert-error', timeout);
 	}
 
 	/**

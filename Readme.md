@@ -70,6 +70,16 @@ Creates a notification that uses Bootstrap's danger style
 @param {number=} timeout
 ```
 
+## .error(title, message, timeout)
+
+Creates a notification that uses Bootstrap's danger style, for code clarify, use .error for error handling
+
+```
+@param {string} title
+@param {string} message
+@param {number=} timeout
+```
+
 ## .success(title, message, timeout)
 
 Creates a notification that uses Bootstrap's success style

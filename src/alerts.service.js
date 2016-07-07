@@ -55,7 +55,7 @@ module.exports = function alertsService($timeout, $rootScope, $window) {
 		* @returns {number} Alerts array length
 		*/
 	function danger(title, message, timeout) {
-		return alert(title, message, 'alert-danger', timeout || 5000);
+		return alert(title, message, 'alert-danger', timeout || 0);
 	}
 
 	/**

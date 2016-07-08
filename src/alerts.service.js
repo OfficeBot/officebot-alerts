@@ -15,6 +15,7 @@ module.exports = function alertsService($timeout, $rootScope, $window) {
 	this.info = info;
 	this.success = success;
 	this.warning = warning;
+	this.error = danger;
 	this.danger = danger;
 	this.alert = alert;
 
@@ -81,14 +82,14 @@ module.exports = function alertsService($timeout, $rootScope, $window) {
 	function alert(title, message, alertClass, timeout ) {
 		var alertTimeout = timeout || defaultTimeout;
 
-		var newAlert = { 
-			"title" : title, 
+		var newAlert = {
+			"title" : title,
 			"message" : message,
-			"alertClass" : alertClass, 
-			"timeout" : alertTimeout, 
+			"alertClass" : alertClass,
+			"timeout" : alertTimeout,
 			"isDone" : false,
 			"timestamp" : new Date().toString()
-		}
+		};
 
 		var len = alerts.push(newAlert);
 		//Instead of adding these to the window object, we should create some logging of some kind
@@ -97,7 +98,7 @@ module.exports = function alertsService($timeout, $rootScope, $window) {
 		if (timeout <= 0) {
 			return len;
 		}
-		
+
 		$timeout(function() {
 			newAlert.isDone = true;
 
